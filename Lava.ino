@@ -1,9 +1,16 @@
-void setup() {
-  // put your setup code here, to run once:
+#include "LavaGame.h"
+#include <Adafruit_NeoPixel.h>
+
+
+
+
+LavaGame lavaGame = LavaGame();
+
+void setup() 
+
 
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  lavaGame.updateAndDraw();
 }
