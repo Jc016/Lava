@@ -4,15 +4,19 @@
 #define NUMPIXELS 58
 
 RockLayer::RockLayer() {
+  for(int i = 0 ; i <NUMPIXELS; i++ ){
+    _pattern[i] = i%2;  
+  }
   clean();
 }
 
-void RockLayer::process(int clockTime) {
+
+void RockLayer::process() {
   const uint32_t ROCK_COLOR [2] = {0xFF000000, 0x00050505};
-  int startColor = clockTime%2;
   clean();
   for (int i = 0; i < NUMPIXELS; i++) {
-    _pixels[i] = ROCK_COLOR [(startColor+i)%2];
+    _pixels[i] = ROCK_COLOR [ _pattern[i]];
+    _pattern[i] = !_pattern[i];
   }
 }
 

@@ -1,3 +1,5 @@
+
+#include <TrueRandom.h>
 #include "LavaLayer.h"
 
 
@@ -9,7 +11,7 @@
 
 void LavaLayer::reset() {
   for (int i = 0; i < LAVA_LINE_COUNT; i ++) {
-    _lavaLines[i].setId(i);
+   _lavaLines[i].setId(i);
   }
   clean();
 }

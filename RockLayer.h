@@ -1,3 +1,5 @@
+//class RockLayer
+// Process the rock layer on the led strip
 #ifndef ROCK_LAYER_H
 #define ROCK_LAYER_H
 
@@ -8,9 +10,16 @@
 class RockLayer {
   public :
     RockLayer();
-    void process(int clockTime);
-      void clean();
+    void process();
+    void clean();
     uint32_t _pixels [NUMPIXELS];
+
+    private:
+    int _id;
+
+    int _pattern[NUMPIXELS];
+
+
 };
 
 #endif

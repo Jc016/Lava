@@ -1,4 +1,5 @@
-
+//class LavaLine
+// Process a strip of lava
 #ifndef LAVA_LINE_H
 #define LAVA_LINE_H
 
